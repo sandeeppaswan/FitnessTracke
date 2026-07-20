@@ -2,6 +2,9 @@ package com.project.fitness.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
 import java.time.LocalDateTime;
@@ -9,7 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-@Entity
+@Entity@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Activity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
